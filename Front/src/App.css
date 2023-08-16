@@ -1,0 +1,15 @@
+hr {
+  background-color: rgb(255, 181, 34);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.background{
+  background-color: black;
+}
+
+.space-left {
+  margin-left: 50px;
+}
+.margin {
+  margin-top: 65px;
+}
