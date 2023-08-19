@@ -12,6 +12,7 @@ build/Release
 # Dependency directories
 node_modules/
 venv/
+.venv/
 jspm_packages/
 
 # Distribution directories
