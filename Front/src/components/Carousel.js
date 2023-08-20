@@ -15,37 +15,37 @@ export const Carousel = () => {
   <div className="carousel-inner background-carousel">
     <div className="carousel-item active">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#rubias">Cervezas RUBIAS</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">Cervezas RUBIAS</a></h1>
         <img className="carousel-image zoom" src={RUBIA} alt="hola"/> 
       </div>
     </div>
     <div className="carousel-item">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#rojas">Cervezas Rojas</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">Cervezas Rojas</a></h1>
         <img className="carousel-image zoom" src={ROJA} alt="..."/>
       </div>
     </div>
     <div className="carousel-item">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#ipas">Cervezas IPAS</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">Cervezas IPAS</a></h1>
         <img className="carousel-image zoom" src={IPA} alt="..."/>
       </div>
     </div>
     <div className="carousel-item">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#vinos">VINOS</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">VINOS</a></h1>
         <img className="carousel-image zoom" src={VINO} alt="..."/>
       </div>
     </div>
     <div className="carousel-item">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#negras">Cervezas NEGRAS</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">Cervezas NEGRAS</a></h1>
         <img className="carousel-image zoom" src={NEGRA} alt="..."/>
       </div>
     </div>
     <div className="carousel-item">
       <div className="inline-content">
-        <h1 className="underline-on-hover"><a href="#apas">Cervezas APAS</a></h1>
+        <h1 className="underline-on-hover"><a href="/Nuestras_cervezas">Cervezas APAS</a></h1>
         <img className="carousel-image zoom" src={APA} alt="..."/>
       </div> 
     </div>

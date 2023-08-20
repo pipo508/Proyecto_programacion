@@ -7,7 +7,7 @@ export const Navbar = () => {
     <div>
         <nav className="navbar navbar-expand-lg nav-backround">
           <div className="container-fluid">
-            <a className="navbar-brand d-flex align-items-center brands zoom underline-on-hover fonts" href="#">
+            <a className="navbar-brand d-flex align-items-center brands zoom underline-on-hover fonts" href="/">
               <img src={Logo} className="logo me-2" alt="Logo" />
               Caver
             </a>
@@ -25,7 +25,7 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="#">
+                  <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
                     Nuestras Cervezas
                   </a>
                 </li>
@@ -35,14 +35,14 @@ export const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link zoom underline-on-hover button fonts" href="#">
-                    Mesas
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                    Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link zoom underline-on-hover button fonts" exact="true" to="/MyForm">
-                    Contacto
-                  </Link>
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/Login">
+                    Login
+                  </a>
                 </li>
               </ul>
             </div>
