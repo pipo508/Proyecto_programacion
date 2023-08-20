@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar } from "../components/Navbar";
-import { MyForm } from "../components/MyForm";
+import { Navbar } from "../components/Navbar/Navbar";
+import { MyForm } from "../components/Form/MyForm";
 export const Login = ()=> {
   return (
         <div className="background "> 
