@@ -1,8 +1,9 @@
 hr {
   background-color: rgb(255, 181, 34);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
+
 .background{
   background-color: black;
 }
@@ -12,4 +13,8 @@ hr {
 }
 .margin {
   margin-top: 65px;
+}
+
+.content {
+  padding-top: 180px;
 }

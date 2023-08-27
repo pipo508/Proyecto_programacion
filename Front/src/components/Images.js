@@ -3,6 +3,7 @@ import Imagen_2 from "../images/fondo.jpg"
 import "./Images-styles.css"
 import Imagen_3 from "../images/fabrica.jpg"
 import Imagen_4 from "../images/hombres.jpg"
+
 export const Images = () => {
     return(
       <div id="rubias" className="row">
