@@ -13,6 +13,7 @@ build/Release
 node_modules/
 venv/
 jspm_packages/
+myvenv/
 
 # Distribution directories
 dist/
