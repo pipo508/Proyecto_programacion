@@ -1,9 +1,19 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask_migrate import Migrate 
+from database import db, FULL_URL_DB
+from models.User import User
 
 app = Flask(__name__)
 CORS(app)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = FULL_URL_DB
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db.init_app(app)
+
+migrate=Migrate()
+migrate.init_app(app,db)
 @app.route('/')
 def home():
     print('home')
@@ -11,14 +21,13 @@ def home():
 
 @app.route('/login', methods=['POST'])
 def login():
-    print("hola")
     data = request.get_json()
     email = data.get('email')
-    password = data.get('password')
+    contraseña = data.get('contraseña')
     
     
 
-    if email == 'test@example.com' and password == 'jesu':
+    if email == 'test@example.com' and contraseña == 'jesu':
         response = {'Mensaje': 'Inicio sesion correctamente'}
         return jsonify(response), 200
     

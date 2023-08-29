@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "../components/Navbar/Navbar";
 import { MyForm } from "../components/Form/MyForm";
 export const Login = ()=> {
-  return (
+    return (
         <div className="background "> 
             <div>
                 <Navbar/>
@@ -11,6 +11,6 @@ export const Login = ()=> {
                 <MyForm/>        
             </div>    
         </div>
-    )
+)
 }
 export default Login
