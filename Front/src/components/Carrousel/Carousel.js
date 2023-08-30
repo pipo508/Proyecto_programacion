@@ -6,12 +6,11 @@ import RUBIA from "../images/Rubia.png"
 import VINO from "../images/vino1.png"
 import NEGRA from "../images/Negra.png"
 import "./Carousel-styles.css"
+import Hr from "../Hr/Hr";
 export const Carousel = () => {
     return(
   <div id="carouselExample" className="carousel slide">
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(255, 181, 34, 0.834)', marginTop: '0px', marginBottom: '0px' }} />
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(0, 0, 0, 0)', marginTop: '0px', marginBottom: '0px' }} />
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(255, 181, 34, 0.834)', marginTop: '0px', marginBottom: '0px' }} />
+    <Hr /> 
     <div className="carousel-inner background-carousel">
       <div className="carousel-item active">
         <div className="inline-content">
@@ -58,9 +57,7 @@ export const Carousel = () => {
       <span className="carousel-control-next-icon" aria-hidden="true"></span>
       <span className="visually-hidden">Next</span>
     </button>
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(255, 181, 34, 0.834)', marginTop: '0px', marginBottom: '0px' }} />
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(0, 0, 0, 0)', marginTop: '0px', marginBottom: '0px' }} />
-    <hr style={{ width: '100%', border: 'none', height: '35px', backgroundColor: 'rgba(255, 181, 34, 0.834)', marginTop: '0px', marginBottom: '50px' }} />
+    <Hr />
   </div>
 )
 }

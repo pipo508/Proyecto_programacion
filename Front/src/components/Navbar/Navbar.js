@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navbar.css";
 import Logo from "../images/logo.png";
-import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
   <div>
@@ -42,6 +41,11 @@ export const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link zoom underline-on-hover button fonts" href="/Login">
                 Login
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
+                Register
               </a>
             </li>
           </ul>
