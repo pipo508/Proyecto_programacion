@@ -8,7 +8,7 @@ export const Login = ()=> {
                 <Navbar/>
             </div>
             <div>
-                <MyForm/>        
+                <MyForm/> 
             </div>    
         </div>
 )
