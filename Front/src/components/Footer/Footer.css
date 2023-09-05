@@ -1,0 +1,21 @@
+/* Estilos para el pie de página */
+.footer {
+    background-color: #000000;
+    color: rgb(223, 164, 0);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  

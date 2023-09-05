@@ -1,0 +1,48 @@
+.carousel-item .inline-content {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item .inline-content h1 {
+  margin-right: 20px;
+  margin-left: 44%;
+}
+
+  .carousel .carousel-inner {
+    display: flex;
+    margin-right: 80%;
+    align-items: center;
+  }
+  
+.carousel .carousel-item img {
+    width: auto;
+  }
+  
+
+.carousel-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+  .zoom {
+    transition: 1s;
+}
+.zoom:hover {
+    transform: scale(1.2);
+    color: rgb(255, 255, 255);
+}
+h1 a {
+  color:rgb(184, 134, 11);
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+  }
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+
+.background_c{
+  background-color: black;
+}
