@@ -25,7 +25,7 @@ export const MyForm = () => {
           title: "Ingreso exitoso",
           icon: "success",
         });
-      } else if (response.status === 400) {
+      } else if (response.status === 404) {
         handleClick({
           title: "Ingreso erroneo",
           icon:"error",

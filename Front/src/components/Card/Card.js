@@ -30,7 +30,7 @@ export const Card = (props) => {
               <p className="texto" style={{color: 'rgb(223, 164, 0)', fontSize: '15px'}}>{ props.texto }</p>
               <button class="btn btn-primary" onClick={handleCardClick}>
                 { props.article }
-                Info
+                Info+
               </button>
             </div>
           </div>
