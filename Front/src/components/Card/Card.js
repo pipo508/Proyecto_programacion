@@ -1,6 +1,6 @@
 import React from 'react'
 import Fondo from '../images/fondo.jpg'
-import './Cards.css'
+import './cards.css'
 import Swal from 'sweetalert2';
 
 export const handleClick = (imageUrl) => {
