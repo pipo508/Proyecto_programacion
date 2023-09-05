@@ -25,7 +25,6 @@ def register():
     address =data.get('address')
     email =data.get('email')
     password =data.get('password')
-    print(email, password)
     user = User(name=name,surname=surname, address=address ,email=email, password=password)
     db.session.add(user)
     db.session.commit()

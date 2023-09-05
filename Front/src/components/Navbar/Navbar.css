@@ -34,3 +34,15 @@ background-size: cover;
 .brands{
     font-size: 65px;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.size-navbar{
+    height: 130px;
+
+}

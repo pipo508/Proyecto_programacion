@@ -5,6 +5,7 @@ import Login from "./Login";
 import App from "../App";
 import NuestrasCervezas from "./Nuestras_cervezas";
 import Register from "./Register";
+
 export const Principal_page = ()=> {
 return (
     <Routes>

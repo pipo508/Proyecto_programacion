@@ -21,10 +21,10 @@ export const Card = (props) => {
 
   return (
     <div>
-      <div className= "row">
+      <div className= "row" >
         <div className='col'>
-          <div className="card cards-text" style={{width: '18rem', backgroundImage: `url(${Fondo})`, backgroundSize: 'cover'}}>
-            <img src={props.imagen} className="card-img-top" alt="..."/> {/* Utiliza la URL completa de la imagen */}
+          <div className="card cards-text" style={{width: '16rem', backgroundImage: `url(${Fondo})`, backgroundSize: 'cover'}}>
+            <img src={props.imagen} className="card-img-top" alt="..."/>
             <div className="card-body">
               <h1 className='titulo' style={{color: 'rgb(223, 164, 0)', fontSize: '22px'}}>{ props.titulo }</h1>
               <p className="texto" style={{color: 'rgb(223, 164, 0)', fontSize: '15px'}}>{ props.texto }</p>

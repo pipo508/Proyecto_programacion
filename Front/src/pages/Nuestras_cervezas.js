@@ -9,10 +9,10 @@ import APAImage from "../components/images/APA.png";
 import RojaImage from "../components/images/Roja.png";
 import RubiaImage from "../components/images/Rubia.png";
 import NegraImage from "../components/images/Negra.png";
-
+import "./Nuestras_cervezas.css";
 export const NuestrasCervezas = () => {
 return (
-    <div className="background">
+    <div className="background content">
         <Navbar />
         <Hr />
         <div>

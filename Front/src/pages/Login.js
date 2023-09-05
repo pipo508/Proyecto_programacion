@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 import { MyForm } from "../components/Form/MyForm";
 export const Login = ()=> {
     return (
-        <div className="background "> 
+        <div className="background content "> 
             <div>
                 <Navbar/>
             </div>
