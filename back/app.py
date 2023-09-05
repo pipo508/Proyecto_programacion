@@ -1,31 +1,24 @@
-from flask import Flask, jsonify, request
+from flask import Flask
 from flask_cors import CORS
+from flask_migrate import Migrate 
+from database import db, FULL_URL_DB
+from resources.auth.routes import auth  
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def home():
-    print('home')
-    return jsonify({'mensaje': 'Home'})
+app.config['SQLALCHEMY_DATABASE_URI'] = FULL_URL_DB
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-@app.route('/login', methods=['POST'])
-def login():
-    print("hola")
-    data = request.get_json()
-    email = data.get('email')
-    password = data.get('password')
-    
-    
+db.init_app(app)
 
-    if email == 'test@example.com' and password == 'jesu':
-        response = {'Mensaje': 'Inicio sesion correctamente'}
-        return jsonify(response), 200
-    
-    else:
-        response = {'Mensaje': 'Error'}
-        return jsonify(response), 401
-    
+migrate = Migrate()
+migrate.init_app(app,db)
+
+
+
+#blueprint
+app.register_blueprint(auth)
 
 if __name__ == '__main__':
     app.run(debug=True)

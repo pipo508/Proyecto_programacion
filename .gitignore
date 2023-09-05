@@ -15,6 +15,7 @@ venv/
 .venv/
 myenv/
 jspm_packages/
+back/myenv/
 
 # Distribution directories
 dist/
