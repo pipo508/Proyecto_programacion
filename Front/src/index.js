@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Principal_page from './pages/Principal_page';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import PublicRoutes from '../src/routes/PublicRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <BrowserRouter>
-      <Principal_page/>
+      <PublicRoutes/>
     </BrowserRouter>
   );
 

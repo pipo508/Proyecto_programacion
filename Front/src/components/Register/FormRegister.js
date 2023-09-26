@@ -4,7 +4,8 @@ import axios from "axios";
 import "./FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2"; // Importa la librería Swal
-
+import { UserNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
+import { UserContext } from "../../../context/UserContext";
 export const handleClick = () => {
   
   Swal.fire({
@@ -14,6 +15,8 @@ export const handleClick = () => {
 };
 
 export const FormRegister = () => {
+  const {setUser} = UserContext(UserContext);
+  
   const initialValues = {
     name: "",
     surname: "",
