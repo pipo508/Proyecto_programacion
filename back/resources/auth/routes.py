@@ -4,15 +4,16 @@ from models.User import User
 
 auth = Blueprint('auth', __name__, url_prefix='/auth')
 
-@auth.route('/Login', methods=['POST'])
+@auth.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     email = data.get('email')
     password = data.get('password')
+    emailDb = User.query.filter_by(email=email).first()
+    role = emailDb.role
     user = User.query.filter_by(email=email, password=password).first()
-    if user:
-        response = {'mensaje': 'Usuario logueado correctamente'}
-        return jsonify(response), 200
+    if emailDb and emailDb.password == password:
+        return jsonify(role=role), 200
     else:
         response = {'mensaje': 'Usuario o password incorrectos'}
         return jsonify(response), 400
@@ -25,8 +26,11 @@ def register():
     address =data.get('address')
     email =data.get('email')
     password =data.get('password')
-    user = User(name=name,surname=surname, address=address ,email=email, password=password)
+    role = "2"
+    print(name, password, email, role)
+
+    user = User(name=name,surname=surname, address=address ,email=email, password=password ,role=role)
     db.session.add(user)
     db.session.commit()
     response = {'mensaje': 'Usuario creado correctamente'}
-    return jsonify(response), 201
+    return jsonify(role=role), 201

@@ -1,38 +1,46 @@
 import React from "react";
 import { Form, Formik, Field } from "formik";
 import axios from "axios";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
 import "../Register/FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-export const handleClick = (config) => {
-  Swal.fire(config);
-  console.log(config);
-};
 
-export const MyForm = () => {
+
+export const Login = () => {
+  
+  const navigate = useNavigate();
+  
   const initialValues = {
     email: "",
     password: "",
   };
+  
+  const { setUser } = useContext(UserContext);
 
   const handleForm = async (values) => {
     console.log("values:", values);
     try {
-      const response = await axios.post('http://127.0.0.1:5000/auth/Login', values);
-      if (response.status === 200) {
-        handleClick({
-          title: "Ingreso exitoso",
-          icon: "success",
-        });
-      } else if (response.status === 404) {
-        handleClick({
-          title: "Ingreso erroneo",
-          icon:"error",
-        });
-      }
+      const response = await axios.post('http://127.0.0.1:5000/auth/login', values);
+      console.log(response.data)
+      const{ role } = response.data
+      console.log("role", role)
+      Swal.fire({
+        icon: 'success',
+        title: 'Inicio de sesion correcto',
+        showConfirmButton: false,
+        timer: 1800
+      })
+      setUser({
+        logged: true,
+        role: role
+      })
+      navigate('/home')
     } catch (error) {
-      console.error("Error:", error);
+      console.error(error);
     }
   };
 
@@ -42,7 +50,12 @@ export const MyForm = () => {
       <div className="container">
         <div className="form-container">
           <h1 className="underline-on-hover selector">Login</h1>
-          <Formik initialValues={initialValues} onSubmit={handleForm}>
+          <Formik
+            
+            initialValues={initialValues} 
+            onSubmit={handleForm}
+            
+            >
             <Form>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -52,7 +65,7 @@ export const MyForm = () => {
                 <label htmlFor="password">Password</label>
                 <Field type="password" className="form-control" id="password" name="password" />
               </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
+              <button type="submit" onClick={handleForm} className="btn btn-primary">Enviar</button>
             </Form>
           </Formik>
         </div>

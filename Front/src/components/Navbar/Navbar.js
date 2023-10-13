@@ -1,7 +1,17 @@
 import React from "react";
 import "./Navbar.css";
 import Logo from "../images/logo.png";
+import { UserContext } from "../../context/UserContext";
+import { useContext } from 'react';
 export const Navbar = () => {
+  
+  const {user,setUser} = UserContext(UserContext);
+
+  const handleLogOut = () => {
+    setUser(false)
+    console.log('salir')
+  }
+  
   return (
   <div>
     <nav className="navbar navbar-expand-lg nav-backround size-navbar">
@@ -22,33 +32,86 @@ export const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
-                Nuestras Cervezas
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link zoom underline-on-hover button fonts" href="#">
-                Nuestro Menu
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link zoom underline-on-hover button fonts" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link zoom underline-on-hover button fonts" href="/Login">
-                Login
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
-                Register
-              </a>
-            </li>
-          </ul>
+          { 
+            // public
+            user.role === "2" ? (          
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
+                    Nuestras Cervezas
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="#">
+                    Nuestro Menu
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/login">
+                    Login
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
+                    Register
+                  </a>
+                </li>
+              </ul>
+              // admin
+            ) : user.role === "1" ? (
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
+                      Nuestras Cervezas
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link zoom underline-on-hover button fonts" href="#">
+                      Nuestro Menu
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                      Home
+                    </a>
+                  </li>
+                </ul>
+              // cuando no esta registrado
+              ) : (
+                <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
+                    Nuestras Cervezas
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="#">
+                    Nuestro Menu
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/login">
+                    Login
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
+                    Register
+                  </a>
+                </li>
+              </ul>
+            )
+          }
         </div>
       </div>
     </nav>

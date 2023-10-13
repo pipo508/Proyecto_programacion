@@ -6,6 +6,7 @@ class User(db.Model):
     address = db.Column(db.String(250))
     email = db.Column(db.String(250))
     password = db.Column(db.String(250))
+    role = db.Column(db.String(250))
 
 
 def str (self):
@@ -16,5 +17,5 @@ def str (self):
             f'address: {self.address}, '
             f'email: {self.email}, '
             f'password: {self.password}, '
-
+            f'role: {self.role}, '
 )

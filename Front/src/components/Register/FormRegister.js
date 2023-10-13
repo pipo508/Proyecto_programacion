@@ -4,8 +4,9 @@ import axios from "axios";
 import "./FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2"; // Importa la librería Swal
-import { UserNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
-import { UserContext } from "../../../context/UserContext";
+//import { UseNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
+import { UserContext } from "../../context/UserContext";
+
 export const handleClick = () => {
   
   Swal.fire({
@@ -15,15 +16,18 @@ export const handleClick = () => {
 };
 
 export const FormRegister = () => {
-  const {setUser} = UserContext(UserContext);
   
-  const initialValues = {
-    name: "",
-    surname: "",
-    address: "",
-    email: "",
-    password: "",
-  };
+    const {setUser} = UserContext(UserContext);
+  
+    //const navigate = UseNavigate();
+
+    const initialValues = {
+      name: "",
+      surname: "",
+      address: "",
+      email: "",
+      password: "",
+    };
 
   const handleForm = async (values) => {
     console.log("values:", values);
@@ -32,14 +36,20 @@ export const FormRegister = () => {
         "http://127.0.0.1:5000/auth/Register",
         values
       );
-      console.log(response.data);
-
-      // Llama a handleClick después de un registro exitoso
-      handleClick();
-    } catch (error) {
-      console.log(error);
+      console.log(response.data)
+      const { role } = response.data
+      console.log('role', role)
+      
+      setUser({
+        logged:true,
+        role: role
+      })
+      // navigate('/Nuestras_cervezas')
+      } catch (error) {
+      console.log(error)
+      }
     }
-  };
+      
 
   return (
     <div>

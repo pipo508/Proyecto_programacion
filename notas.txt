@@ -1,3 +1,7 @@
 user.context:
     conocer el estado de los componentes
     oculta datos o partes de la aplicacion dependiendo el tipo de usuario que sea
+app.js:
+    es lo que renderiza la aplicacion
+hub:
+    les da vida a los componentes
