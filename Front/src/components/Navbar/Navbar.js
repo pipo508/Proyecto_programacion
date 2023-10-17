@@ -35,6 +35,11 @@ const handleLogOut = () => {
                 // admin
                 user.role === "1" ? (          
                     <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/NuestrasCrevezas">
+                            Nuestras Cervezas
+                            </a>
+                        </li>
                         
                     </ul>
                 // usuario

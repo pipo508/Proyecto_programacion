@@ -21,7 +21,7 @@ export const App = () => {
             user.logged ? (
               <Route path="/*" element={<PrivateRoutes />} />
             ) : (
-              <Route path="/" element={<PublicRoutes />} />
+              <Route path="/*" element={<PublicRoutes />} />
             )
           }
         </Routes>

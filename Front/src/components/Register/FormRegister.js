@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Formik, Field } from "formik";
 import axios from "axios";
+import { useContext } from 'react';
 import "./FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2"; // Importa la librería Swal
@@ -17,7 +18,7 @@ export const handleClick = () => {
 
 export const FormRegister = () => {
   
-    const {setUser} = UserContext(UserContext);
+    const {setUser} = useContext(UserContext);
   
     //const navigate = UseNavigate();
 
