@@ -6,8 +6,7 @@ import "../Register/FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-
-
+import Footer from "../Footer/Footer";
 
 export const Login = () => {
   
@@ -37,14 +36,14 @@ export const Login = () => {
         logged: true,
         role: role
       })
-      navigate('/NuestrasCrevezas')
+      navigate('/NuestrasCervezas')
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div>
+    <div className="content">
       <Hr />
       <div className="container">
         <div className="form-container">
@@ -70,6 +69,9 @@ export const Login = () => {
         </div>
       </div>
       <Hr />
+      <div>  
+        <Footer />
+      </div>
     </div>
   );
 };

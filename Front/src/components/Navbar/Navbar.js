@@ -2,12 +2,15 @@ import "./Navbar.css";
 import Logo from "../images/logo.png";
 import { UserContext } from "../../context/UserContext";
 import { useContext } from "react";
-
+import {Link} from "react-router-dom";
 export const Navbar = () => {
 const {user,setUser} = useContext(UserContext);
 
 const handleLogOut = () => {
-    setUser(false)
+    setUser({
+    logged: false,
+    role: ''
+    })
     console.log('salir')
     }
 
@@ -36,9 +39,16 @@ const handleLogOut = () => {
                 user.role === "1" ? (          
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/NuestrasCrevezas">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/beers">
                             Nuestras Cervezas
-                            </a>
+                            </a> */}
+                        <Link to="/product" className="nav-link zoom underline-on-hover button fonts" aria-current="page">AddProduct</Link>
+                        </li>
+                        <li className="nav-item">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
+                                Salir
+                            </a> */}
+                            <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
                         </li>
                         
                     </ul>
@@ -46,43 +56,45 @@ const handleLogOut = () => {
                 ) : user.role === "2" ? (
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/Nuestras_cervezas">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/NuestrasCervezas">
                             Nuestras Cervezas
-                            </a>
+                            </a> */}
+                            <Link to="/NuestrasCervezas"className="nav-link zoom underline-on-hover button fonts" aria-current="page">Nuestras Cervezas</Link>
+
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" href="#">
-                            Nuestro Menu
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" href="/">
                             Home
-                            </a>
+                            </a> */}
+                            <Link to="/"className="nav-link zoom underline-on-hover button fonts" aria-current="page" >Home</Link>
+                        </li>
+                        <li className="nav-item">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
+                                Salir
+                            </a> */}
+                            <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
                         </li>
                     </ul>
                 // cuando no esta registrado
                 ) : (
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" href="/">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" href="/">
                                 Home
-                            </a>
+                            </a> */}
+                            <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" href="/login">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" href="/login">
                                 Login
-                            </a>
+                            </a> */}
+                            <Link to="/login" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Login</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts" href="/Register">
                                 Register
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/Register">
-                                Salir
-                            </a>
+                            </a> */}
+                            <Link to="/Register" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Register</Link>
                         </li>
                     </ul>
                     )

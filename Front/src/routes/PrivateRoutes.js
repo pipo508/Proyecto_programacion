@@ -1,14 +1,16 @@
 import React from "react";
 import { Route,Routes, Navigate } from "react-router-dom"; 
-import App from "../App";
-import {NuestrasCervezas} from "../components/Nuestras_cervezas";
-
-
+import {NuestrasCervezas} from "../components/NuestrasCervezas/Nuestras_cervezas";
+import {Home} from "../components/Inicio/Home";
+import {Product} from "../components/Product/Product"
 export const PrivateRoutes = ()=> {
 return (
     <Routes>
-        <Route path="/NuestrasCrevezas" element={<NuestrasCervezas/>}/>
-        <Route path='*' element={<Navigate to='/login' replace />} />
+        <Route path="/NuestrasCervezas" element={<NuestrasCervezas/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/product" element={<Product/>}/>
+        <Route path='*' element={<Navigate to='/' replace />} />
+
 
     </Routes>
 )
