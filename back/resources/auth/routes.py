@@ -11,7 +11,6 @@ def login():
     password = data.get('password')
     emailDb = User.query.filter_by(email=email).first()
     role = emailDb.role
-    user = User.query.filter_by(email=email, password=password).first()
     if emailDb and emailDb.password == password:
         return jsonify(role=role), 200
     else:

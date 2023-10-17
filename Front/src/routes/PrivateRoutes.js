@@ -1,16 +1,13 @@
 import React from "react";
 import { Route,Routes } from "react-router-dom"; 
 import App from "../App";
-import {NuestrasCervezas} from "../pages/Nuestras_cervezas";
-import {Register} from "../pages/Register";
+import {NuestrasCervezas} from "../components/Nuestras_cervezas";
+import {Register} from "../components/Register";
+import {Login} from "../components/Login/Login"
 
 export const PrivateRoutes = ()=> {
 return (
     <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/Nuestras_cervezas" element={<NuestrasCervezas/>}/>
-        <Route path="/Register" element={<Register/>}/>
-
     </Routes>
 )
 }

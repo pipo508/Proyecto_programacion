@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar } from "../components/Navbar/Navbar";
-import { Card } from "../components/Card/Card";
-import Hr from "../components/Hr/Hr";
+import { Navbar } from "./Navbar/Navbar";
+import { Card } from "./Card/Card";
+import Hr from "./Hr/Hr";
 
 // Importa las imágenes con la URL completa
 import IPAImage from "../components/images/IPA.png";
