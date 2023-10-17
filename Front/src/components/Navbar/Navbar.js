@@ -2,10 +2,11 @@ import React from "react";
 import "./Navbar.css";
 import Logo from "../images/logo.png";
 import { UserContext } from "../../context/UserContext";
-import { useContext } from 'react';
+import { useContext } from "react";
+
 export const Navbar = () => {
   
-  const {user,setUser} = UserContext(UserContext);
+  const {user,setUser} = useContext(UserContext);
 
   const handleLogOut = () => {
     setUser(false)
@@ -42,8 +43,8 @@ export const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link zoom underline-on-hover button fonts" href="#">
-                    Nuestro Menu
+                  <a className="nav-link zoom underline-on-hover button fonts" href="#" onClick={handleLogOut}>
+                    Salir
                   </a>
                 </li>
                 <li className="nav-item">

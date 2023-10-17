@@ -20,6 +20,9 @@ migrate.init_app(app,db)
 #blueprint
 app.register_blueprint(auth)
 
+#rosurces
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
