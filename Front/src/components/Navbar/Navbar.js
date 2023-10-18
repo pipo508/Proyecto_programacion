@@ -42,7 +42,7 @@ const handleLogOut = () => {
                             {/* <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/beers">
                             Nuestras Cervezas
                             </a> */}
-                        <Link to="/product" className="nav-link zoom underline-on-hover button fonts" aria-current="page">AddProduct</Link>
+                        <Link to="/product" className="nav-link zoom underline-on-hover button fonts" >AddProduct</Link>
                         </li>
                         <li className="nav-item">
                             {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">

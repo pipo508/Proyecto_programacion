@@ -35,7 +35,7 @@ export const Product = () => {
     console.log("values:", values);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/auth/product",
+        "http://127.0.0.1:5000/product",
         values
       );
       console.log(response.data)
@@ -70,7 +70,7 @@ export const Product = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="surname">Type</label>
+                <label htmlFor="beerType">Type</label>
                 <Field
                   type="text"
                   className="form-control"
@@ -79,20 +79,20 @@ export const Product = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="address">Price</label>
+                <label htmlFor="beerPrice">Price</label>
                 <Field
-                  type="integer"
+                  type="text"
                   className="form-control"
                   id="beerPrice"
                   name="beerPrice"
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="address">Description</label>
+                <label htmlFor="beerDescription">Description</label>
                 <Field
                   type="text"
                   className="form-control"
-                  id="description"
+                  id="beerDescription"
                   name="beerDescription"
                 />
               </div>

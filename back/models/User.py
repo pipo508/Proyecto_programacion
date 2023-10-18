@@ -8,6 +8,7 @@ class User(db.Model):
     email = db.Column(db.String(250))
     password = db.Column(db.String(250))
     role = db.Column(db.String(250))
+    # userVentas = db.relationship('Venta', backref='user')
 
 
 def str (self):

@@ -6,12 +6,12 @@ class Product(db.Model):
     beerType = db.Column(db.String(250))
     beerDescription = db.Column(db.String(250))
     beerPrice = db.Column(db.String(250))
-
+    # productVentas = db.relationship('Venta', backref='product')
     def __str__(self):
         return (
             f'id: {self.id}, '
-            f'name: {self.beerName}, '
-            f'type: {self.beerType}, '
-            f'description: {self.beerDescription}, '
-            f'price: {self.beerPrice}'
+            f'beerName: {self.beerName}, '
+            f'beerType: {self.beerType}, '
+            f'beerDescription: {self.beerDescription}, '
+            f'beerPrice: {self.beerPrice}'
         )

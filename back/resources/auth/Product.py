@@ -10,23 +10,23 @@ class ProductList(Resource):
         beerType = request.json['beerType']
         beerDescription = request.json['beerDescription']
         beerPrice = request.json['beerPrice']
-        Product = Product(beerName=beerName, beerType=beerType, beerDescription=beerDescription, beerPrice=beerPrice)
+        product = Product(beerName=beerName, beerType=beerType, beerDescription=beerDescription, beerPrice=beerPrice)
 
-        db.session.add(Product)
+        db.session.add(product)
         db.session.commit()
         return jsonify({"mensaje": "Producto creado exitosamente"})
     
     def get(self):
-        Products= db.session.query(Product).all()
-        print("Product",Products)
+        products= db.session.query(Product).all()
+        print("product",products)
         result=[]
-        for Product in Products:
+        for product in products:
             result.append({
-                "id": Product.id,
-                "beerName": Product.beerName,
-                "beerType": Product.beerType,
-                "beerDescription": Product.beerDescription,
-                "beerPrice": Product.beerPrice,
+                "id": product.id,
+                "beerName": product.beerName,
+                "beerType": product.beerType,
+                "beerDescription": product.beerDescription,
+                "beerPrice": product.beerPrice,
             })
         response = jsonify(result)
         response.status_code = 200
