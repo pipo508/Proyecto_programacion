@@ -8,14 +8,6 @@ import Swal from "sweetalert2"; // Importa la librería Swal
 //import { UseNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
 import { UserContext } from "../../context/UserContext";
 
-export const handleClick = () => {
-  
-  Swal.fire({
-    title: "Registro exitoso",
-    icon: 'success',
-  });
-};
-
 export const FormRegister = () => {
   
     const {setUser} = useContext(UserContext);
@@ -36,14 +28,18 @@ export const FormRegister = () => {
       const response = await axios.post(
         "http://127.0.0.1:5000/auth/Register",
         values
-      );
-      console.log(response.data)
-      const { role } = response.data
-      console.log('role', role)
+      );  
+
+      const { role, idUser } = response.data
+      Swal.fire({
+        title: "Registro exitoso",
+        icon: 'success',
+      });
       
       setUser({
         logged:true,
-        role: role
+        role: role,
+        id: idUser
       })
       // navigate('/Nuestras_cervezas')
       } catch (error) {
@@ -105,7 +101,7 @@ export const FormRegister = () => {
                   name="password"
                 />
               </div>
-              <button type="submit" className="btn btn-primary"onClick={handleClick}>
+              <button type="submit" className="btn btn-primary"onClick={handleForm}>
                 Enviar
               </button>
             </Form>

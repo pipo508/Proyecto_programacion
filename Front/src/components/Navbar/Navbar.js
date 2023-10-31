@@ -74,6 +74,12 @@ const handleLogOut = () => {
                             </a> */}
                             <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
                         </li>
+                        <li className="nav-item">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
+                                Salir
+                            </a> */}
+                            <Link to="/product" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Products</Link>
+                        </li>
                     </ul>
                 // cuando no esta registrado
                 ) : (

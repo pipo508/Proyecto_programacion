@@ -31,5 +31,6 @@ def register():
     user = User(name=name,surname=surname, address=address ,email=email, password=password ,role=role)
     db.session.add(user)
     db.session.commit()
-    response = {'mensaje': 'Usuario creado correctamente'}
-    return jsonify(role=role), 201
+    registerEmail= User.query.filter_by(email=email).first()
+    idUser= registerEmail.id
+    return jsonify(role=role, idUser=idUser), 200

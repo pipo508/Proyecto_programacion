@@ -24,7 +24,7 @@ export const Login = () => {
     try {
       const response = await axios.post('http://127.0.0.1:5000/auth/login', values);
       console.log(response.data)
-      const{ role } = response.data
+      const{ role , idUser } = response.data
       console.log("role", role)
       Swal.fire({
         icon: 'success',
@@ -34,7 +34,8 @@ export const Login = () => {
       })
       setUser({
         logged: true,
-        role: role
+        role: role,
+        id : idUser
       })
       navigate('/NuestrasCervezas')
     } catch (error) {
