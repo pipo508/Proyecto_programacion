@@ -8,14 +8,13 @@ import { useNavigate } from 'react-router-dom';
 export const productList = () => {
 
     const { user } = useContext(UserContext);
- 
     const [products, setProduct] = useState([]);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         fetchProduct();
-      }, []);
+    }, []);
 
     
     const fetchProduct = async () => {
@@ -61,7 +60,6 @@ export const productList = () => {
                                 <th scope="col">Nombre de la cerveza</th>
                                 <th scope="col">Descripción</th>
                                 <th scope="col">Nivel de alcohol</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -94,8 +92,7 @@ export const productList = () => {
                                         }
                                     </tr>
                                 ))
-                            }  
-                                                
+                            }              
                         </tbody>
                     </table>
                 </div>
