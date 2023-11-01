@@ -1,3 +1,12 @@
 .cards-text {
     color: rgb(223, 164, 0);
 }
+.zoom {
+    transition: 1s;
+}
+.zoom:hover {
+    transform: scale(1.2);
+}
+.separationbottom{
+    margin-left: 9px;
+}

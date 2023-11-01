@@ -8,6 +8,7 @@ import Swal from "sweetalert2"; // Importa la librería Swal
 //import { UseNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
 import { UserContext } from "../../context/UserContext";
 
+
 export const FormRegister = () => {
   
     const {setUser} = useContext(UserContext);

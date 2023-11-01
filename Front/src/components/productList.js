@@ -3,9 +3,10 @@ import axios from 'axios';
 import { UserContext } from '../context/UserContext';
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom';
+import "./ProductList.css";
+import Hr from "./Hr/Hr";
 
-
-export const productList = () => {
+export const ProductList = () => {
 
     const { user } = useContext(UserContext);
     const [products, setProduct] = useState([]);
@@ -19,11 +20,11 @@ export const productList = () => {
     
     const fetchProduct = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/product');
+            const response = await axios.get('http://localhost:5000/ProductList');
             console.log(response)
             setProduct(response.data);
         } catch (error) {
-            console.error(error);
+            console.error(400);  //hasta aca llega
         }
     };
     
@@ -52,20 +53,25 @@ export const productList = () => {
 
     return (
         <div>
+            <Hr />
+        <div className='container text'>
+        <div className='form-container background-admin'>
+            <h1 className='underline-on-hover selector'>Lista de productos</h1>
             <div className='row'>
                 <div className='col-md-6'>
                     <table className="table">
                         <thead>
-                            <tr>
+                            <tr className='text'>
                                 <th scope="col">Nombre de la cerveza</th>
+                                <th scope="col">Tipo de cerveza</th>
                                 <th scope="col">Descripción</th>
-                                <th scope="col">Nivel de alcohol</th>
+                                <th scope="col">Precio</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                products.   map(product => (
-                                    <tr key={product.id}>
+                                products.map(product => (
+                                    <tr className="text_data"key={product.id}>
                                         <td>{product.beerName}</td>
                                         <td>{product.beerType}</td>
                                         <td>{product.beerDescription}</td>
@@ -97,6 +103,9 @@ export const productList = () => {
                     </table>
                 </div>
             </div>
+        </div>
+        </div>
+        <Hr />
         </div>
     )
 }

@@ -37,7 +37,7 @@ export const Login = () => {
         role: role,
         id : idUser
       })
-      navigate('/NuestrasCervezas')
+      navigate('')
     } catch (error) {
       console.error(error);
     }

@@ -28,9 +28,13 @@ export const Card = (props) => {
             <div className="card-body">
               <h1 className='titulo' style={{color: 'rgb(223, 164, 0)', fontSize: '22px'}}>{ props.titulo }</h1>
               <p className="texto" style={{color: 'rgb(223, 164, 0)', fontSize: '15px'}}>{ props.texto }</p>
-              <button class="btn btn-primary" onClick={handleCardClick}>
+              <button class="btn btn-primary zoom " onClick={handleCardClick}>
                 { props.article }
                 Info+
+              </button>
+              <button class="btn btn-warning zoom separationbottom" onClick={handleCardClick}>
+                { props.article }
+                Añadir al carrito+
               </button>
             </div>
           </div>

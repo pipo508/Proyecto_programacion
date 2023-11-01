@@ -9,6 +9,7 @@ def login():
     data = request.get_json()
     email = data.get('email')
     password = data.get('password')
+    print(email, password)
     emailDb = User.query.filter_by(email=email).first()
     role = emailDb.role
     if emailDb and emailDb.password == password:

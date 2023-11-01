@@ -25,7 +25,7 @@ migrate.init_app(app,db)
 app.register_blueprint(auth)
 
 #rosurces
-api.add_resource(ProductList, '/product')
+api.add_resource(ProductList, '/ProductList')
 
 
 if __name__ == '__main__':
