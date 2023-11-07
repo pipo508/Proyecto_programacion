@@ -4,7 +4,7 @@ from flask_migrate import Migrate
 from database import db, FULL_URL_DB
 from resources.auth.routes import auth 
 from flask_restful import Api
-from resources.auth.Product import ProductList
+from resources.auth.Product import ProductList, ProdList
 
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ app.register_blueprint(auth)
 
 #rosurces
 api.add_resource(ProductList, '/ProductList')
-
+api.add_resource(ProdList, '/ProdList/<int:id>')
 
 if __name__ == '__main__':
     app.run(debug=True) 

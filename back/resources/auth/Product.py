@@ -31,3 +31,22 @@ class ProductList(Resource):
         response = jsonify(result)
         response.status_code = 200
         return response
+
+class ProdList(Resource):
+    def put(self, id):
+        product = Product.query.get_or_404(id)
+        product.beerName = request.json.get('beerName',product.beerName)
+        product.beerType = request.json.get('beerType',product.beerType)
+        product.beerDescription = request.json.get('beerDescription',product.beerDescription)
+        product.beerPrice= request.json.get('beerPrice',product.beerPrice)
+        
+        print(product)
+        
+        db.session.commit()
+        return jsonify({'mensaje': 'Trabajo editado con éxito.'})
+
+    def delete(self, id):
+        product = Product.query.get_or_404(id)
+        db.session.delete(product)
+        db.session.commit()
+        return jsonify({'mensaje': 'Trabajo eliminado con éxito.'})
