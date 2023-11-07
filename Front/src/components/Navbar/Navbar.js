@@ -50,6 +50,12 @@ const handleLogOut = () => {
                             </a> */}
                             <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
                         </li>
+                        <li className="nav-item">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
+                                Salir
+                            </a> */}
+                            <Link to="/Inicio" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Inicio</Link>
+                        </li>
                         
                     </ul>
                 // usuario
@@ -60,7 +66,7 @@ const handleLogOut = () => {
 
                         </li>
                         <li className="nav-item">
-                            <Link to="/"className="nav-link zoom underline-on-hover button fonts" aria-current="page" >Home</Link>
+                            <Link to="/"className="nav-link zoom underline-on-hover button fonts" aria-current="page" >Inicio</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
@@ -76,7 +82,7 @@ const handleLogOut = () => {
                             {/* <a className="nav-link zoom underline-on-hover button fonts" href="/">
                                 Home
                             </a> */}
-                            <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Home</Link>
+                            <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Inicio</Link>
                         </li>
                         <li className="nav-item">
                             {/* <a className="nav-link zoom underline-on-hover button fonts" href="/login">

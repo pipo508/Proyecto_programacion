@@ -22,6 +22,7 @@ return (
                     <div className="col card-image">
                         <Card
                             titulo="Cerveza IPA"
+                            
                             texto="Aromática y amarga, perfecta para los amantes del lúpulo."
                             imagen={IPAImage}
                         />
