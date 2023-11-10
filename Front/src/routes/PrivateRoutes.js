@@ -3,15 +3,15 @@ import { Route,Routes } from "react-router-dom";
 import {NuestrasCervezas} from "../components/NuestrasCervezas/Nuestras_cervezas";
 import {Inicio} from "../components/Inicio/Inicio";
 import {Product} from "../components/Product/Product"
-import { ProductList } from "../components/ProductList";
+import {AddProduct} from "../components/AddProduct";
 export const PrivateRoutes = ()=> {
 return (
     <Routes>
         <Route path="/NuestrasCervezas" element={<NuestrasCervezas/>}/>
         <Route path="/" element={<Inicio/>}/>
-        <Route path="/ventas" element={<ProductList/>}/>
         <Route path="/ProductList" element={<Product/>}/>
         <Route path='/Inicio' element={<Inicio/>} />
+        <Route path="/AddProduct" element={<AddProduct/>}/>
         {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
 
 

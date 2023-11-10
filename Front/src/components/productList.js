@@ -31,7 +31,7 @@ export const ProductList = () => {
     };
     
 
-    const onnAddProduct = async (productId) => {
+    const onAddProduct = async (productId) => {
 
         const values = { 
             userId:user.id,
@@ -131,12 +131,13 @@ export const ProductList = () => {
                                             user.role === '2' ? ( 
                                                 <div>
                                                     <td> 
-                                                        <button type="button" className="btn btn-success" onClick={() => onnAddProduct
+                                                        <button type="button" className="btn btn-success" onClick={() => onAddProduct
                                                     (product.id)} > Postularme </button>
                                                     </td>
                                                 </div>
-                                            // admin puede editar y eliminar
+                                            // admin puede editar , agregar y eliminar
                                             ):(
+                                                
                                                 <div>
                                                     <td> 
                                                         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editProductModal" onClick={() => onEditProduct(product)}> Editar </button>

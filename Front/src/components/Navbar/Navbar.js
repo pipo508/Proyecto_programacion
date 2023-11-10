@@ -42,7 +42,7 @@ const handleLogOut = () => {
                             {/* <a className="nav-link zoom underline-on-hover button fonts" aria-current="page" href="/beers">
                             Nuestras Cervezas
                             </a> */}
-                        <Link to="/ProductList" className="nav-link zoom underline-on-hover button fonts" >AddProduct</Link>
+                        <Link to="/ProductList" className="nav-link zoom underline-on-hover button fonts" >Lista de Productos</Link>
                         </li>
                         <li className="nav-item">
                             {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
@@ -54,7 +54,13 @@ const handleLogOut = () => {
                             {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
                                 Salir
                             </a> */}
-                            <Link to="/Inicio" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Inicio</Link>
+                            <Link to="/Inicio" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Inicio</Link>
+                        </li>
+                        <li className="nav-item">
+                            {/* <a className="nav-link zoom underline-on-hover button fonts"onClick={handleLogOut} href="/">
+                                Salir
+                            </a> */}
+                            <Link to="/AddProduct" className="nav-link zoom underline-on-hover button fonts" aria-current="page" >Crear Producto</Link>
                         </li>
                         
                     </ul>

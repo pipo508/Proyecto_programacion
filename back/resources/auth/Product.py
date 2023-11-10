@@ -10,6 +10,7 @@ class ProductList(Resource):
         beerType = request.json['beerType']
         beerDescription = request.json['beerDescription']
         beerPrice = request.json['beerPrice']
+        
         product = Product(beerName=beerName, beerType=beerType, beerDescription=beerDescription, beerPrice=beerPrice)
 
         db.session.add(product)

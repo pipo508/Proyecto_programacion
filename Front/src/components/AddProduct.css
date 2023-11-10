@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: white;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  border: 10px solid rgb(184, 134, 11);
+  border-radius: 50px;
+}
+
+.underline-on-hover:hover {
+  text-decoration: underline;
+}
+
+.selector {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+}
+.content {
+  padding-top: 130px;
+}
