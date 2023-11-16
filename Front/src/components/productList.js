@@ -35,21 +35,22 @@ export const ProductList = () => {
 
         const values = { 
             userId:user.id,
-            productId:productId        
+            ProductId:productId        
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/ventas', values)
+            console.log('values', values)
+            const response = await axios.post('http://localhost:5000/VentasList', values)
             console.log(response.data)
             Swal.fire({
                 icon: 'success',
-                title: 'Postulación correcta',
+                title: 'Compra realizada correctamente',
                 showConfirmButton: false,
                 timer: 1800
             })
             navigate('')
         } catch (error) {
-            console.log(error)
+            console.log(error, 'error')
         }
     };
 
@@ -58,7 +59,13 @@ export const ProductList = () => {
     const onDeleteProduct = async (productId) => {
         try {
             await axios.delete(`http://localhost:5000/ProdList/${productId}`);
-            fetchProduct();
+            fetchProduct()
+            Swal.fire({
+                icon: 'success',
+                title: 'Eliminado correctamente',
+                showConfirmButton: false,
+                timer: 1800
+            });
         } catch (error) {
             console.error(error);
         }
@@ -132,7 +139,7 @@ export const ProductList = () => {
                                                 <div>
                                                     <td> 
                                                         <button type="button" className="btn btn-success" onClick={() => onAddProduct
-                                                    (product.id)} > Postularme </button>
+                                                    (product.id)} > Comprar </button>
                                                     </td>
                                                 </div>
                                             // admin puede editar , agregar y eliminar

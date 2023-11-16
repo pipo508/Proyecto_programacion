@@ -23,35 +23,35 @@ return (
                         <Card
                             titulo="Cerveza IPA"
                             
-                            texto="Aromática y amarga, perfecta para los amantes del lúpulo."
+                            texto="Una explosión tropical de lúpulos que despierta tus sentidos con frescura audaz."
                             imagen={IPAImage}
                         />
                     </div>
                     <div className="col">
                         <Card
                         titulo="Cerveza APA"
-                        texto="Refrescante y equilibrada, ideal para cualquier ocasión."
+                        texto="Una American Pale Ale vibrante con lúpulos cítricos, perfecta para aventuras refrescantes."
                         imagen={APAImage}
                         />
                     </div>
                     <div className="col">
                         <Card
                         titulo="Cerveza Roja"
-                        texto="Notas tostadas y dulces, una experiencia única en sabor."
+                        texto="Cerveza roja con notas frutales y caramelo, equilibrio perfecto entre dulzura y amargor."
                         imagen={RojaImage}
                         />
                     </div>
                     <div className="col">
                         <Card
                         titulo="Cerveza Rubia"
-                        texto="Suave y ligera, para disfrutar en días soleados."
+                        texto="Una cerveza rubia suave y dorada con toques refrescantes y un final delicadamente equilibrado."
                         imagen={RubiaImage}
                         />
                     </div>
                     <div className="col">
                         <Card
                         titulo="Cerveza Negra"
-                        texto="Intensa y oscura, cautivará a los amantes del malta."
+                        texto="Cerveza negra robusta con toques de café y chocolate, una experiencia intensa y seductora.."
                         imagen={NegraImage}
                         />
                     </div>

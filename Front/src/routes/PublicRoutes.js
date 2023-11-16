@@ -11,7 +11,6 @@ return (
         <Route path="/Register" element={<Register/>}/>
         <Route path="/" element={<Inicio/>}/>
         <Route path='*' element={<Navigate to='/' replace />} />
-
     </Routes>
 )
 }   

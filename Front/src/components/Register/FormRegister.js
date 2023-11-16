@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import "./FormRegister.css";
 import Hr from "../Hr/Hr";
 import Swal from "sweetalert2"; // Importa la librería Swal
-//import { UseNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
+import { useNavigate} from "react-router-dom"; // Importa la librería "react-router-dom
 import { UserContext } from "../../context/UserContext";
 
 
@@ -13,7 +13,7 @@ export const FormRegister = () => {
   
     const {setUser} = useContext(UserContext);
   
-    //const navigate = UseNavigate();
+    const navigate = useNavigate();
 
     const initialValues = {
       name: "",
@@ -42,7 +42,7 @@ export const FormRegister = () => {
         role: role,
         id: idUser
       })
-      // navigate('/Nuestras_cervezas')
+      navigate('/Inicio')
       } catch (error) {
       console.log(error)
       }

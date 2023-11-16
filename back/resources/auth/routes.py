@@ -12,8 +12,9 @@ def login():
     print(email, password)
     emailDb = User.query.filter_by(email=email).first()
     role = emailDb.role
+    idUser = emailDb.id
     if emailDb and emailDb.password == password:
-        return jsonify(role=role), 200
+        return jsonify(role=role, idUser=idUser), 200
     else:
         response = {'mensaje': 'Usuario o password incorrectos'}
         return jsonify(response), 400

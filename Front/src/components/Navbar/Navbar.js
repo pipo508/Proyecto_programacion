@@ -78,7 +78,10 @@ const handleLogOut = () => {
                             <Link to="/" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Salir</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/ProductList" className="nav-link zoom underline-on-hover button fonts" aria-current="page" onClick={handleLogOut}>Products</Link>
+                            <Link to="/ProductList" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Products</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/VentasList" className="nav-link zoom underline-on-hover button fonts" aria-current="page">Mis productos</Link>
                         </li>
                     </ul>
                 // cuando no esta registrado

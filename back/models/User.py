@@ -1,17 +1,18 @@
 from app import db
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key=True)
     name= db.Column(db.String(250))
     surname = db.Column(db.String(250))
     address = db.Column(db.String(250))
     email = db.Column(db.String(250))
     password = db.Column(db.String(250))
     role = db.Column(db.String(250))
-    # userVentas = db.relationship('Venta', backref='user')
+    
+    userVentas = db.relationship('Ventas', backref='user', cascade='all, delete-orphan')
 
 
-def str (self):
+def __str__(self):
         return(
             f'id: {self.id}, '
             f'name: {self.name}, '
